@@ -23,7 +23,7 @@ void i2c_task(void *p) {
 
     uint8_t buffer[1];
     uint8_t reg_addr = 0xD0;
-    const int BMP280_I2C_ADDRESS = 0x77; 
+    const int BMP280_I2C_ADDRESS = 0x76; 
 
     
     i2c_write_blocking(i2c_default, BMP280_I2C_ADDRESS, &reg_addr, 1, true);
@@ -33,7 +33,7 @@ void i2c_task(void *p) {
     printf("BMP280 ID: 0x%X \n", buffer[0]);
 
     while (1) {
-        vTaskDelay(pdMS_TO_TICKS(200));
+        vTaskDelay(pdMS_TO_TICKS(100));
     }
 }
 
