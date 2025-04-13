@@ -23,7 +23,7 @@ void i2c_task(void *p) {
 
     uint8_t buffer[1];
     uint8_t reg_addr = 0xD0;
-    const int BMP280_I2C_ADDRESS = 0x76; 
+    const int BMP280_I2C_ADDRESS = 0x77; 
 
     
     i2c_write_blocking(i2c_default, BMP280_I2C_ADDRESS, &reg_addr, 1, true);
